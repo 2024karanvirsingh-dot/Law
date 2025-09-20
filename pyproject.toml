@@ -1,0 +1,18 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a//dev/null b/pyproject.toml
+index 0000000000000000000000000000000000000000..5886dd0e08be704231c89b88a57f16c134d3dc6a 100644
+--- a//dev/null
++++ b/pyproject.toml
+@@ -0,0 +1,9 @@
++[project]
++name = "baj-law-chatbot"
++version = "0.1.0"
++description = "Plain-language immigration chatbot for the Baj Law Group PLLC"
++authors = [{name = "Baj Law Group PLLC"}]
++requires-python = ">=3.10"
++
++[tool.pytest.ini_options]
++testpaths = ["tests"]
+ 
+EOF
+)
