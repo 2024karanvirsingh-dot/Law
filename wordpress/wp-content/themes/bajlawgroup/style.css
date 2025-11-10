@@ -1,0 +1,208 @@
+/*
+Theme Name: Baj Law Group Immigration
+Theme URI: https://bajlawgroup.com
+Author: The Baj Law Group PLLC
+Author URI: https://bajlawgroup.com
+Description: Custom WordPress theme for The Baj Law Group PLLC featuring a service overview, testimonials, FAQs, and an interactive immigration guidance chatbot.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: bajlawgroup
+*/
+
+:root {
+  --baj-primary: #0a3d62;
+  --baj-secondary: #f7931e;
+  --baj-accent: #0abde3;
+  --baj-neutral: #f4f6f8;
+  --baj-text: #1b1e23;
+  --baj-text-light: #6c7885;
+  --baj-radius: 14px;
+  --baj-shadow: 0 10px 25px rgba(11, 53, 92, 0.12);
+}
+
+body {
+  font-family: "Source Sans Pro", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  color: var(--baj-text);
+  background-color: #fff;
+}
+
+a {
+  color: var(--baj-secondary);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+.site-header {
+  background: linear-gradient(135deg, var(--baj-primary), #05213a);
+  color: white;
+  padding: 3rem 1.25rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.site-header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('data:image/svg+xml,%3Csvg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Ccircle opacity="0.1" cx="200" cy="200" r="200" fill="white"/%3E%3C/svg%3E');
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.site-header .header-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.site-header h1 {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  margin-bottom: 0.75rem;
+}
+
+.site-header p {
+  font-size: 1.125rem;
+  margin: 0 auto 1.75rem;
+  max-width: 640px;
+}
+
+.site-header .cta-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.8rem;
+  border-radius: var(--baj-radius);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.button.button-primary {
+  background: var(--baj-secondary);
+  color: #fff;
+  box-shadow: var(--baj-shadow);
+}
+
+.button.button-primary:hover,
+.button.button-primary:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(247, 147, 30, 0.25);
+}
+
+.button.button-outline {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.section {
+  padding: clamp(3rem, 6vw, 5rem) 1.25rem;
+}
+
+.section.alt {
+  background-color: var(--baj-neutral);
+}
+
+.section .section-inner {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.service-grid,
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: var(--baj-radius);
+  padding: 1.75rem;
+  box-shadow: var(--baj-shadow);
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.testimonial {
+  background: linear-gradient(135deg, #fff, #f9fbff);
+  border-left: 4px solid var(--baj-secondary);
+  padding: 2rem;
+  border-radius: var(--baj-radius);
+  box-shadow: var(--baj-shadow);
+}
+
+.testimonial p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.testimonial .author {
+  display: block;
+  margin-top: 1.25rem;
+  font-weight: 600;
+  color: var(--baj-primary);
+}
+
+.contact-panel {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: start;
+}
+
+.contact-panel .panel {
+  background: #fff;
+  border-radius: var(--baj-radius);
+  padding: 2rem;
+  box-shadow: var(--baj-shadow);
+}
+
+.contact-panel .panel h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.site-footer {
+  background: #031c31;
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+  padding: 2rem 1.25rem;
+  font-size: 0.95rem;
+}
+
+.site-footer a {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+@media (max-width: 600px) {
+  .site-header .cta-group {
+    flex-direction: column;
+  }
+}

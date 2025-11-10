@@ -1,0 +1,127 @@
+.baj-chatbot {
+  max-width: 640px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: var(--baj-radius);
+  box-shadow: var(--baj-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.baj-chatbot__header {
+  background: linear-gradient(135deg, var(--baj-primary), #05213a);
+  color: #fff;
+  padding: 1.5rem;
+}
+
+.baj-chatbot__header h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.35rem;
+}
+
+.baj-chatbot__header p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.baj-chatbot__messages {
+  list-style: none;
+  margin: 0;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: 320px;
+  overflow-y: auto;
+  background: #f9fbff;
+}
+
+.baj-chatbot__message {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.baj-chatbot__message--bot .baj-chatbot__bubble {
+  align-self: flex-start;
+  background: #fff;
+  color: var(--baj-text);
+  border-radius: var(--baj-radius) var(--baj-radius) var(--baj-radius) 4px;
+  box-shadow: var(--baj-shadow);
+}
+
+.baj-chatbot__message--user .baj-chatbot__bubble {
+  align-self: flex-end;
+  background: var(--baj-secondary);
+  color: #fff;
+  border-radius: var(--baj-radius) var(--baj-radius) 4px var(--baj-radius);
+}
+
+.baj-chatbot__bubble {
+  padding: 1rem 1.25rem;
+  line-height: 1.6;
+  font-size: 0.98rem;
+}
+
+.baj-chatbot__meta {
+  font-size: 0.8rem;
+  color: var(--baj-text-light);
+}
+
+.baj-chatbot__form {
+  display: flex;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid #e6ecf2;
+  background: #fff;
+}
+
+.baj-chatbot__form input[type="text"] {
+  flex: 1 1 auto;
+  padding: 0.85rem 1rem;
+  border-radius: var(--baj-radius);
+  border: 1px solid #d5dde6;
+  font-size: 1rem;
+}
+
+.baj-chatbot__form button {
+  padding: 0.85rem 1.6rem;
+  border-radius: var(--baj-radius);
+  border: none;
+  background: var(--baj-primary);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.baj-chatbot__form button:hover,
+.baj-chatbot__form button:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(10, 61, 98, 0.2);
+}
+
+.baj-chatbot__suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.baj-chatbot__chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(10, 61, 98, 0.08);
+  color: var(--baj-primary);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.baj-chatbot__chip:hover,
+.baj-chatbot__chip:focus {
+  background: rgba(10, 61, 98, 0.15);
+}
